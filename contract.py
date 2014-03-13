@@ -1,5 +1,5 @@
 def contract(a):
-	hesh = dict()
+	hesh = dict{}
 	contracted = []
 	for nums in a:
 		if not nums in hesh:
