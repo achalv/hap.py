@@ -36,11 +36,11 @@ def dlVideo(url_list):
 		best = video.getbest()
 		print video.title+"_"+best.resolution+"_"+best.extension 
 		#print best.url
-		#dlPath = "/vids/"+best.title+"_"+best.extension
-		#dlPath = "/vids/" + best.title + "." + best.extension
+		dlPath = "vids/"+best.title+"_"+best.resolution+"_"+best.extension
 		best.download(quiet=False)#, filepath=dlPath)
 
 if __name__ == "__main__":
-#	dlVideo("https://www.youtube.com/watch?v=HV8DwVYQX08")
-	#dlVideo(fetchLinks())
-	fetchLinks()
+	a = fetchlinks()
+	print a
+	dlVideo(a) #download videos
+	
