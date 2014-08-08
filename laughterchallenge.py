@@ -35,9 +35,9 @@ def dlVideo(url_list):
 		video = pafy.new(url)
 		best = video.getbest()
 		print video.title+"_"+best.resolution+"_"+best.extension 
-		#print best.url
+		
 		dlPath = "vids/"+best.title+"_"+best.resolution+"_"+best.extension
-		best.download(quiet=False)#, filepath=dlPath)
+		best.download(quiet=False, filepath=dlPath)
 
 if __name__ == "__main__":
 	a = fetchlinks()
